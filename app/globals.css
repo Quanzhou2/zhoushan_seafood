@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ocean: #0a1f3d;
+    --coral: #ff5018;
+    --seafoam: #5eaaa8;
+    --sand: #faf8f1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #fdfbf4;
+    color: #102a43;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #ffd4bd;
+    color: #0a1f3d;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(10, 31, 61, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 31, 61, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .bg-wave {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10 Q 25 0 50 10 T 100 10 V20 H0Z' fill='%230a1f3d' opacity='0.08'/%3E%3C/svg%3E");
+    background-size: 200px 40px;
+    background-repeat: repeat-x;
+  }
+
+  .gradient-ocean {
+    background: linear-gradient(135deg, #0a1f3d 0%, #1f3a5e 50%, #2d5d94 100%);
+  }
+
+  .gradient-sunset {
+    background: linear-gradient(135deg, #ff7438 0%, #ff5018 50%, #c7280d 100%);
+  }
+
+  .gradient-mist {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 60%, #fdfbf4 100%);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+
+  .glass-dark {
+    background: rgba(10, 31, 61, 0.65);
+    backdrop-filter: blur(12px) saturate(180%);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 1px 2px rgba(10, 31, 61, 0.04), 0 4px 16px rgba(10, 31, 61, 0.06);
+  }
+
+  .shadow-card {
+    box-shadow: 0 2px 6px rgba(10, 31, 61, 0.05), 0 8px 24px rgba(10, 31, 61, 0.08);
+  }
+
+  .shadow-card-hover {
+    box-shadow: 0 8px 16px rgba(10, 31, 61, 0.08), 0 24px 48px rgba(10, 31, 61, 0.14);
+  }
+}
